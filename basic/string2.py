@@ -51,7 +51,16 @@ def not_bad(s):
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
   # +++your code here+++
-  return
+  if len(a) % 2 == 1 :
+    a_split = len(a) / 2 + 1
+  else :
+    a_split = len(a) / 2
+  if len(b) % 2 == 1 :
+    b_split = len(b) / 2 + 1
+  else :
+    b_split = len(b) / 2
+
+  return (a[:a_split] + b[:b_split] + a[a_split:] + b[b_split:] )
 
 
 # Simple provided test() function used in main() to print
