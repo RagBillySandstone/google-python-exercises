@@ -54,7 +54,10 @@ def both_ends(s):
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
   # +++your code here+++
-  return
+  first_letter = s[:1]
+  return_string = s[0] + s[1:].replace(first_letter, '*')
+  # http://stackoverflow.com/questions/30740827/python-string-replacement-except-first-character
+  return (return_string)
 
 
 # D. MixUp
