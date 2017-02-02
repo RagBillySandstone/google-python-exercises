@@ -45,6 +45,8 @@ import sys
 # and builds and returns a word/count dict for it.
 # Then print_words() and print_top() can just call the utility function.
 
+# Full disclosure (on the shoulders of giants), I got a lot of help from:
+# http://www.thegeekstuff.com/2014/06/python-sorted/
 ###
 def count_words(filename):
   """
@@ -80,6 +82,14 @@ def print_words(filename):
     print "%s %d" %(key, x[key])
 
   return
+###
+
+
+def print_top(filename):
+  x = count_words(filename)
+  for key, value in sorted(x.iteritems(), key=lambda (k, v): (v, k), reverse = True):
+    print "%s %s" % (key, value)
+
 
 # This basic command line argument parsing code is provided and
 # calls the print_words() and print_top() functions which you must define.
