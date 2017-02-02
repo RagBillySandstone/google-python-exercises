@@ -47,15 +47,23 @@ import sys
 
 ###
 def word_list(filename):
+"""
+Reads a file and returns a dictionary with each word in the file and how many times
+the word appears in the file
+"""
   with open(filename) as f:
     words = f.read().lower().split()
+
   word_count = {}
+
   for word in words:
     if word not in word_count:
       word_count[word] = 1
     else:
       word_count[word] += 1
+
   return(word_count)
+
 
 
 # This basic command line argument parsing code is provided and
