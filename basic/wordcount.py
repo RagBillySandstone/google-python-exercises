@@ -47,10 +47,10 @@ import sys
 
 ###
 def count_words(filename):
-"""
-Reads a file and returns a dictionary with each word in the file and how many times
-the word appears in the file
-"""
+  """
+  Reads a file and returns a dictionary with each word in the file and how many times
+  the word appears in the file
+  """
   with open(filename) as f:
     words = f.read().lower().split()
 
@@ -65,6 +65,21 @@ the word appears in the file
   return(word_count)
 
 ##
+
+def print_words(filename):
+  """
+  Counts how often each word occurs in filename and prints the count in format
+  word1 count1
+  word2 count2
+  ...
+
+  word list is sorted alphabetically
+  """
+  x = count_words(filename)	
+  for key in sorted(x):		# sorted(dict) returns sorted list of keys
+    print "%s %d" %(key, x[key])
+
+  return
 
 # This basic command line argument parsing code is provided and
 # calls the print_words() and print_top() functions which you must define.
