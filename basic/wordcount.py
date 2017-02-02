@@ -46,7 +46,7 @@ import sys
 # Then print_words() and print_top() can just call the utility function.
 
 ###
-def word_list(filename):
+def count_words(filename):
 """
 Reads a file and returns a dictionary with each word in the file and how many times
 the word appears in the file
@@ -64,7 +64,7 @@ the word appears in the file
 
   return(word_count)
 
-
+##
 
 # This basic command line argument parsing code is provided and
 # calls the print_words() and print_top() functions which you must define.
