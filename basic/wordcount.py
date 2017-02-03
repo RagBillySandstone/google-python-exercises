@@ -87,8 +87,10 @@ def print_words(filename):
 
 def print_top(filename):
   x = count_words(filename)
-  for key, value in sorted(x.iteritems(), key=lambda (k, v): (v, k), reverse = True):
-    print "%s %s" % (key, value)
+  items = sorted(x.items(), key=lambda(k, v): (v, k), reverse=True)
+
+  for item in items[:20]:
+    print item[0], item[1]
 
 
 # This basic command line argument parsing code is provided and
